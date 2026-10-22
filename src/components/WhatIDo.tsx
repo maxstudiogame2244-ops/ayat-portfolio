@@ -25,7 +25,7 @@ const WhatIDo = () => {
     };
   }, []);
   return (
-    <div className="whatIDO">
+    <div className="whatIDO" id="whatIDO">
       <div className="what-box">
         <h2 className="title">
           W<span className="hat-h2">HAT</span>
@@ -87,24 +87,24 @@ const WhatIDo = () => {
             <div className="what-corner"></div>
 
             <div className="what-content-in">
-              <h3>DEVELOP</h3>
-              <h4>Description</h4>
+              <h3>DEVELOPMENT</h3>
+              <h4>Software & Game Systems</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                quia aliquid laboriosam ducimus sit molestiae.
+                Building high-concurrency backend services, event-driven Minecraft plugins, custom game launchers, and interactive game mechanics with 6 years of coding expertise.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
-                <div className="what-tags">JavaScript</div>
+                <div className="what-tags">Java</div>
+                <div className="what-tags">Python</div>
                 <div className="what-tags">TypeScript</div>
-                <div className="what-tags">Three.js</div>
-                <div className="what-tags">React</div>
-                <div className="what-tags">Css</div>
+                <div className="what-tags">C#</div>
+                <div className="what-tags">Spigot / Paper</div>
+                <div className="what-tags">Fabric / Forge</div>
+                <div className="what-tags">Mixins</div>
                 <div className="what-tags">Node.js</div>
-                <div className="what-tags">Next.js</div>
-                <div className="what-tags">Express.js</div>
-                <div className="what-tags">PHP</div>
-                <div className="what-tags">MySql</div>
+                <div className="what-tags">Godot Engine</div>
+                <div className="what-tags">Roblox Studio</div>
+                <div className="what-tags">REST & WebSockets</div>
               </div>
               <div className="what-arrow"></div>
             </div>
@@ -128,22 +128,25 @@ const WhatIDo = () => {
             </div>
             <div className="what-corner"></div>
             <div className="what-content-in">
-              <h3>DESIGN</h3>
-              <h4>Description</h4>
+              <h3>INFRASTRUCTURE</h3>
+              <h4>Cloud, VPS & Networks</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                quia aliquid laboriosam ducimus sit molestiae
+                Architecting bare-metal VPS solutions, game server deployment pipelines (Firemax Hosting), containerized environments, and enterprise-grade network security.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
-                <div className="what-tags">Blender</div>
-                <div className="what-tags">Zbrush</div>
-                <div className="what-tags">UI Design</div>
-                <div className="what-tags">Motion</div>
-                <div className="what-tags">Rigging</div>
-                <div className="what-tags">3D Animation</div>
-                <div className="what-tags">Character Design</div>
-                <div className="what-tags">Modelling</div>
+                <div className="what-tags">VPS Management</div>
+                <div className="what-tags">Linux (Ubuntu/Debian)</div>
+                <div className="what-tags">Docker</div>
+                <div className="what-tags">Nginx</div>
+                <div className="what-tags">Cloudflare</div>
+                <div className="what-tags">Supabase</div>
+                <div className="what-tags">PostgreSQL</div>
+                <div className="what-tags">MySQL</div>
+                <div className="what-tags">Redis</div>
+                <div className="what-tags">VPN / Proxies</div>
+                <div className="what-tags">SSL/TLS</div>
+                <div className="what-tags">Uptime Tuning</div>
               </div>
               <div className="what-arrow"></div>
             </div>

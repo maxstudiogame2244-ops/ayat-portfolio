@@ -8,7 +8,7 @@
   line-height: 1.5;
   scroll-behavior: smooth;
   color-scheme: light dark;
-  color: #eae5ec;
+  color: #ecfdf5;
   background-color: var(--backgroundColor);
 
   font-synthesis: none;
@@ -18,8 +18,9 @@
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
-  --accentColor: #c2a4ff;
-  --backgroundColor: #0b080c;
+  --accentColor: #10b981;
+  --accentColorGlow: #34d399;
+  --backgroundColor: #080d0a;
   --vh: 100vh;
   --vh: 100svh;
 }
@@ -58,7 +59,7 @@ main {
 body {
   margin: 0;
   height: auto;
-  background-color: #000;
+  background-color: #080d0a;
   flex-grow: 1;
   --cWidth: calc(100% - 30px);
   --cMaxWidth: 1920px;
@@ -94,10 +95,11 @@ body {
 .techstack {
   width: 100%;
   position: relative;
-  height: var(--vh);
-  margin: auto;
-  margin-top: 50px;
-  margin-bottom: -100px;
+  height: 100vh;
+  margin: 60px auto 40px auto;
+  overflow: hidden;
+  clip-path: inset(0 0 0 0);
+  background-color: var(--backgroundColor);
 }
 
 .techstack h2 {

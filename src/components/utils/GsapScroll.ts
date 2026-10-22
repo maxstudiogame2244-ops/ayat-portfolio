@@ -51,7 +51,7 @@ export function setCharTimeline(
     if (object.name === "screenlight") {
       object.material.transparent = true;
       object.material.opacity = 0;
-      object.material.emissive.set("#C8BFFF");
+      object.material.emissive.set("#00ff88");
       gsap.timeline({ repeat: -1, repeatRefresh: true }).to(object.material, {
         emissiveIntensity: () => intensity * 8,
         duration: () => Math.random() * 0.6,
@@ -136,7 +136,7 @@ export function setAllTimeline() {
   const careerTimeline = gsap.timeline({
     scrollTrigger: {
       trigger: ".career-section",
-      start: "top 30%",
+      start: "top 35%",
       end: "100% center",
       scrub: true,
       invalidateOnRefresh: true,
@@ -145,11 +145,10 @@ export function setAllTimeline() {
   careerTimeline
     .fromTo(
       ".career-timeline",
-      { maxHeight: "10%" },
+      { maxHeight: "5%" },
       { maxHeight: "100%", duration: 0.5 },
       0
     )
-
     .fromTo(
       ".career-timeline",
       { opacity: 0 },
@@ -172,20 +171,4 @@ export function setAllTimeline() {
       },
       0
     );
-
-  if (window.innerWidth > 1024) {
-    careerTimeline.fromTo(
-      ".career-section",
-      { y: 0 },
-      { y: "20%", duration: 0.5, delay: 0.2 },
-      0
-    );
-  } else {
-    careerTimeline.fromTo(
-      ".career-section",
-      { y: 0 },
-      { y: 0, duration: 0.5, delay: 0.2 },
-      0
-    );
-  }
 }

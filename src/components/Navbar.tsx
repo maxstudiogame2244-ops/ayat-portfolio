@@ -27,11 +27,15 @@ const Navbar = () => {
     links.forEach((elem) => {
       let element = elem as HTMLAnchorElement;
       element.addEventListener("click", (e) => {
-        if (window.innerWidth > 1024) {
+        let section = element.getAttribute("data-href");
+        if (section) {
           e.preventDefault();
-          let elem = e.currentTarget as HTMLAnchorElement;
-          let section = elem.getAttribute("data-href");
-          smoother.scrollTo(section, true, "top top");
+          if (window.innerWidth > 1024) {
+            smoother.scrollTo(section, true, "top top");
+          } else {
+            const target = document.querySelector(section);
+            target?.scrollIntoView({ behavior: "smooth" });
+          }
         }
       });
     });
@@ -39,23 +43,31 @@ const Navbar = () => {
       ScrollSmoother.refresh(true);
     });
   }, []);
+
   return (
     <>
       <div className="header">
-        <a href="/#" className="navbar-title" data-cursor="disable">
-          Logo
-        </a>
-        <a
-          href="mailto:example@mail.com"
-          className="navbar-connect"
-          data-cursor="disable"
-        >
-          example@mail.com
-        </a>
+        <div className="navbar-brand">
+          <a href="/#" className="navbar-title" data-cursor="disable">
+            AYAT
+          </a>
+          <span className="navbar-badge">6Y EXP</span>
+        </div>
+
         <ul>
           <li>
             <a data-href="#about" href="#about">
               <HoverLinks text="ABOUT" />
+            </a>
+          </li>
+          <li>
+            <a data-href="#whatIDO" href="#whatIDO">
+              <HoverLinks text="SKILLS" />
+            </a>
+          </li>
+          <li>
+            <a data-href="#career" href="#career">
+              <HoverLinks text="CAREER" />
             </a>
           </li>
           <li>
@@ -66,6 +78,17 @@ const Navbar = () => {
           <li>
             <a data-href="#contact" href="#contact">
               <HoverLinks text="CONTACT" />
+            </a>
+          </li>
+          <li className="navbar-social-li">
+            <a
+              href="https://www.instagram.com/ayat22.44"
+              target="_blank"
+              rel="noreferrer"
+              className="navbar-connect-btn"
+              data-cursor="disable"
+            >
+              @ayat22.44
             </a>
           </li>
         </ul>
